@@ -9,8 +9,7 @@ function makeCalendar () {
     let month = localNow.toLocaleString('es-MX', { month:'long' })
     month = month[0].toUpperCase() + month.slice(1)
     let year = localNow.getFullYear()
-    calendarBody.textContent = day + ' ' + date + ' de ' + month + ' de ' + year
-
+    document.querySelector('#date').textContent = day + ' ' + date + ' de ' + month + ' de ' + year;
     let hours = localNow.getHours()
     let pm = false
     if (hours > 12) {
