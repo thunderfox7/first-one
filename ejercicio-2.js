@@ -1,9 +1,9 @@
 console.log('Hi, im a placeholder');
 function makeCalendar () {
-    let selectedTimeZone = 'America/Mexico_City'
+    let timeZone = 'America/Mexico_City'
     let now = new Date();
-    let localNow = new Date(now.toLocaleString('en-US', { timeZone: selectedTimeZone }))
-    let day = localNow.toLocaleString('es-MX', { weekday:'long' })
+    let localNow = new Date(now.toLocaleString('en-US', { timeZone: timeZone }))
+    let day = now.toLocaleString('es-MX', { weekday:'long' })
     day = day[0].toUpperCase() + day.slice(1)
     let date = localNow.getDate()
     let month = localNow.toLocaleString('es-MX', { month:'long' })
